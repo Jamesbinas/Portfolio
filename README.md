@@ -6,7 +6,7 @@ Space-themed portfolio. Yui guides you around the galaxy.
 
 # 🌌 James Binas — Portfolio
 
-Live site: [add-when-i-set](hopefully i dont forget)
+Live site: [https://jamesbinas-portfolio.netlify.app/]
 
 ---
 
