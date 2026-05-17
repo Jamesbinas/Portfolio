@@ -1,0 +1,96 @@
+#yui {
+    position: fixed;
+    bottom: 60px;
+    left: 40px;
+    z-index: 999;
+    image-rendering: pixelated;
+    pointer-events: none;
+}
+
+#yui.right-side {
+    left: auto;
+    right: 40px;
+}
+
+#yui-sprite {
+    display: block;
+    width: 300px;
+    height: 412px;
+    background-image: url('../sprites/Yui-idle.png');
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    animation: yuiIdle 2s steps(1) infinite;
+
+}
+
+#yui.right-side #yui-sprite {
+    transform: scaleX(-1);
+}
+
+@keyframes yuiIdle {
+    0%   { background-position: -100px 0px; }
+    25%  { background-position: -390px 0px; }
+    50%  { background-position: -700px 0px; }
+    75%  { background-position: -1000px 0px; }
+    100% { background-position: 0px 0px; }
+}
+
+@keyframes yuiFlying {
+    0%   { background-position: -100px 0px; }
+    25%  { background-position: -390px 0px; }
+    50%  { background-position: -700px 0px; }
+    75%  { background-position: -1050px 0px; }
+    100% { background-position: 0px 0px; }
+}
+
+@keyframes yuiLanding {
+    0%   { background-position: -100px 0px; }
+    25%  { background-position: -390px 0px; }
+    50%  { background-position: -700px 0px; }
+    75%  { background-position: -1000px 0px; }
+    100% { background-position: 0px 0px; }
+}
+
+#yui-sprite.flying {
+    animation-name: yuiFlying;
+    animation-duration: 0.4s;
+}
+
+#yui-sprite.landing {
+    animation-name: yuiLanding;
+    animation-duration: 0.5s;
+}
+
+#yui-dialogue {
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10, 5, 32, 0.92);
+    border: 1px solid #7c3aed55;
+    border-radius: 8px;
+    padding: 8px 14px;
+    white-space: nowrap;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 13px;
+    color: #e2e8f0;
+    letter-spacing: 0.5px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+#yui-dialogue.show {
+    opacity: 1;
+}
+
+#yui-dialogue::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #7c3aed55;
+}
