@@ -6,7 +6,7 @@ Space-themed portfolio. Yui guides you around the galaxy.
 
 # 🌌 James Binas — Portfolio
 
-Live site: [add-when-i-set](hopefully i dont forget)
+Live site: [https://jamesbinas-portfolio.netlify.app/]
 
 ---
 
@@ -28,4 +28,4 @@ Navigate between planets to explore my work.
 - GitHub: github.com/Jamesbinas
 - LinkedIn: linkedin.com/in/jamesmartinbinas
 - Email: jamesmartinbinas@gmail.
-- Contacts: +973 7404-0573
+- Contacts: +974 7404-0573
