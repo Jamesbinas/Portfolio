@@ -1,0 +1,314 @@
+/* =====================
+   JB JEWELRY — STYLE.CSS
+   Global styles + variables
+   ===================== */
+
+:root {
+  --gold: hsl(43, 74%, 49%);
+  --gold-light: hsl(43, 74%, 65%);
+  --gold-dark: hsl(43, 74%, 35%);
+  --black: hsl(0, 0%, 8%);
+  --dark: hsl(0, 0%, 12%);
+  --dark-mid: hsl(0, 0%, 18%);
+  --gray: hsl(0, 0%, 50%);
+  --light-gray: hsl(0, 0%, 90%);
+  --white: hsl(0, 0%, 98%);
+  --font-heading: 'Georgia', serif;
+  --font-body: 'Segoe UI', sans-serif;
+  --radius: 8px;
+  --radius-lg: 16px;
+  --shadow: 0 4px 20px hsla(0, 0%, 0%, 0.15);
+  --shadow-lg: 0 8px 40px hsla(0, 0%, 0%, 0.25);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--black);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =====================
+   BUTTONS
+   ===================== */
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+
+.btn-primary {
+  background-color: var(--gold);
+  color: var(--black);
+}
+
+.btn-primary:hover {
+  background-color: var(--gold-dark);
+  color: var(--white);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+}
+
+.btn-outline:hover {
+  background-color: var(--gold);
+  color: var(--black);
+}
+
+/* =====================
+   SECTION TITLES
+   ===================== */
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--black);
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: var(--gold);
+  margin: 12px auto 0;
+}
+
+/* =====================
+   ITEM CARDS
+   ===================== */
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 0 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.item-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid var(--light-gray);
+}
+
+.item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.item-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.item-card-info {
+  padding: 16px;
+}
+
+.item-card-name {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.item-card-category {
+  font-size: 13px;
+  color: var(--gray);
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.item-card-price {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--gold-dark);
+}
+
+/* =====================
+   PLACEHOLDER IMAGES
+   ===================== */
+
+.placeholder {
+  background: linear-gradient(135deg, var(--light-gray) 0%, hsl(43, 30%, 85%) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder::after {
+  content: '💍';
+  font-size: 32px;
+  opacity: 0.4;
+}
+
+/* =====================
+   FORMS
+   ===================== */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-family: var(--font-body);
+  background: var(--white);
+  color: var(--black);
+  transition: var(--transition);
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px hsla(43, 74%, 49%, 0.15);
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+/* =====================
+   MODAL
+   ===================== */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: hsla(0, 0%, 0%, 0.6);
+}
+
+.modal-content {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  max-width: 500px;
+  width: 90%;
+  z-index: 1;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--gray);
+}
+
+.modal-img {
+  width: 100%;
+  height: 250px;
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+
+#footer {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.footer-logo {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.footer-sub {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+/* =====================
+   HIDDEN UTILITY
+   ===================== */
+
+.hidden {
+  display: none !important;
+}

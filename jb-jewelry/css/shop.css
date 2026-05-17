@@ -1,0 +1,59 @@
+/* =====================
+   SHOP.CSS
+   ===================== */
+
+#shop-header {
+  background: linear-gradient(135deg, var(--black) 0%, var(--dark-mid) 100%);
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--white);
+}
+
+#shop-header h1 {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+
+#shop-header p {
+  color: hsl(0, 0%, 70%);
+  font-size: 16px;
+}
+
+#filters {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  padding: 32px 20px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 24px;
+  border-radius: 99px;
+  border: 1px solid var(--light-gray);
+  background: var(--white);
+  color: var(--dark);
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--black);
+}
+
+#shop-grid-section {
+  padding: 0 40px 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  #shop-grid-section { padding: 0 20px 60px; }
+}

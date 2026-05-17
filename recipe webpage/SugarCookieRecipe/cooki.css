@@ -1,0 +1,81 @@
+body{
+    background-color: antiquewhite;
+    margin:0;
+}
+
+
+.nav-bar{
+    height: 4em;
+    display: flex;
+    justify-content: space-evenly;
+    margin:0px;
+    background: rgba(231, 211, 211, 0.877);
+    padding: 25px;
+    color: black;
+    box-shadow:2px 5px 2px rgba(212, 230, 95, 0.821);
+    
+}
+
+.rar {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20%;
+  align-items: center;
+}
+.rar a{
+    text-decoration: none;
+}
+
+.image-container{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.result{
+    height: 400px;
+    width: 80vh;
+    
+    border-radius: 10%;
+    border: 3px solid rgb(189, 227, 174);
+    box-shadow: 4px 3px rgb(59, 73, 59);
+}
+h1,h2,h3{
+    font-family: "allura", cursive;
+    font-size: 3em;
+    margin-top:1em;
+    margin-bottom: 0;
+}
+
+
+p,li{
+    font-size: 1.2em;
+    font-family: "cinzel",serif;
+    text-shadow:  2px 2px rgba(245, 150, 8, 0.844);
+}
+.text-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.why, .ing-container{
+    background: bisque;
+    border:2px solid rgb(218, 171, 114) ;
+    max-width: 80%;
+    padding: 20px;
+    text-indent: 20px;
+}
+
+.prep, .proce{
+    background: rgb(243, 193, 131);
+    border: 2px solid rgb(251, 142, 10);
+    max-width: 80%;
+    padding: 20px;
+    text-indent: 20px;
+}

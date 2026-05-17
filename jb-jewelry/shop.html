@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — JB Jewelry</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div id="nav-logo">
+      <span class="logo-text">JB</span>
+      <span class="logo-sub">Jewelry</span>
+    </div>
+    <ul id="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="shop.html" class="nav-link active">Shop</a></li>
+      <li><a href="repair.html" class="nav-link">Repair</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <button id="hamburger">☰</button>
+  </nav>
+
+  <!-- SHOP HEADER -->
+  <section id="shop-header">
+    <h1>Our Collection</h1>
+    <p>Browse our selection of fine jewelry</p>
+  </section>
+
+  <!-- FILTERS -->
+  <div id="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="rings">Rings</button>
+    <button class="filter-btn" data-filter="necklaces">Necklaces</button>
+    <button class="filter-btn" data-filter="earrings">Earrings</button>
+    <button class="filter-btn" data-filter="bracelets">Bracelets</button>
+    <button class="filter-btn" data-filter="watches">Watches</button>
+  </div>
+
+  <!-- ITEMS GRID -->
+  <section id="shop-grid-section">
+    <div class="items-grid" id="shop-grid">
+      <!-- JS will populate this -->
+    </div>
+  </section>
+
+  <!-- ITEM MODAL -->
+  <div id="item-modal" class="modal hidden">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close">✕</button>
+      <div class="modal-img placeholder"></div>
+      <div class="modal-info">
+        <h2 id="modal-name">Item Name</h2>
+        <p id="modal-category">Category</p>
+        <p id="modal-price">₱0.00</p>
+        <p id="modal-desc">Description goes here.</p>
+        <button class="btn btn-primary" id="modal-buy">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <p class="footer-logo">JB Jewelry</p>
+    <p class="footer-sub">© 2026 JB Jewelry. All rights reserved.</p>
+  </footer>
+
+  <script src="js/items.js"></script>
+  <script src="js/shop.js"></script>
+
+</body>
+</html>

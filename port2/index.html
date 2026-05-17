@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamesbinas~ Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/yui.css">
+    <link rel="stylesheet" href="css/section.css">
+</head>
+<body>
+
+    <div id="intro-overlay">
+        <div id="intro-content">
+            <div id="intro-scanline"></div>
+            <p id="intro-sub">WELCOME TO</p>
+            <h1 id="intro-title">JAMES<span>'S</span><br>SPACE</h1>
+            <p id="intro-desc">Navigate the cosmos.<br>Click a planet. Explore my universe.</p>
+            <button id="intro-btn">
+                <span>ENTER THE VOID</span>
+                <div class="btn-glow"></div>
+            </button>
+            <p id="intro-hint">↓ click any planet to travel there ↓</p>
+        </div>
+        <canvas id="intro-stars"></canvas>
+    </div>
+
+    <div id="viewport">
+        <div id="cursor-blob"></div>
+
+        <div id="space">
+        </div>
+
+        <div id="yui">
+                <div id="yui-sprite"></div>
+                <div id="yui-dialogue"></div>
+        </div>
+
+        <div id="nav-panel">
+            <button id="nav-toggle">🚀 Travel to a planet</button>
+            <div id="nav-links">
+                <button class="nav-item" data-target="about">🟣 About</button>
+                <button class="nav-item" data-target="projects">🟢 Projects</button>
+                <button class="nav-item" data-target="skills">🟠 Skills</button>
+                <button class="nav-item" data-target="contact">🔵 Contact</button>
+            </div>
+        </div>
+
+        <div id="hud">
+            <span id="hud-coords">X: 0 | Y: 0</span>
+        </div>
+    </div>
+
+    <div id="sections">
+
+        <section id="about" class="panel hidden">
+            <button class="close-btn">✕ Back to Space</button>
+            <div class="panel-inner">
+                <div class="panel-header">
+                    <span class="planet-tag">🟣 EMBER CORE</span>
+                    <h2>About Me</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <p class="big-intro">Hey!! I'm <strong>James</strong>, but you can call me <strong>Akashi</strong>.</p>
+                            <p>3rd year Computer Science student based in <strong>Doha, Qatar</strong>. I build things on the internet — mostly frontend, sometimes full stack, always with too much passion and not enough sleep.</p>
+                            <p>I believe in shipping first, styling later. My projects are real, deployed, and used by actual humans.</p>
+                            <div class="about-tags">
+                                <span>Frontend Dev</span>
+                                <span>CS Student</span>
+                                <span>Doha, Qatar</span>
+                                <span>Open to Work</span>
+                            </div>
+                        </div>
+                        <div class="about-links">
+                            <a href="https://github.com/Jamesbinas" target="_blank" class="link-card">
+                                <span class="link-icon">⚡</span>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://gambapay.netlify.app" target="_blank" class="link-card">
+                                <span class="link-icon">🎰</span>
+                                <span>GambaPay</span>
+                            </a>
+                            <a href="https://kitchen-pal-james.netlify.app" target="_blank" class="link-card">
+                                <span class="link-icon">🍳</span>
+                                <span>KitchenPal</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="panel hidden">
+            <button class="close-btn">✕ Back to Space</button>
+            <div class="panel-inner">
+                <div class="panel-header">
+                    <span class="planet-tag">🟢 AQUA DRIFT</span>
+                    <h2>Projects</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="projects-grid">
+
+                        <div class="project-card">
+                            <div class="project-top">
+                                <span class="project-status live">LIVE</span>
+                                <h3>GambaPay</h3>
+                            </div>
+                            <p>Multi-page bill splitting web app. Spin a wheel, let fate decide who pays. Full vanilla JS — themes, quotes, localStorage, leaderboard.</p>
+                            <div class="project-stack">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <a href="https://gambapay.netlify.app" target="_blank" class="project-link">View Live →</a>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-top">
+                                <span class="project-status live">LIVE</span>
+                                <h3>KitchenPal</h3>
+                            </div>
+                            <p>Ingredient-based recipe finder. Type what's in your fridge, get recipes. Full stack with Python/Flask backend and Spoonacular API.</p>
+                            <div class="project-stack">
+                                <span>HTML</span><span>CSS</span><span>JS</span><span>Python</span><span>Flask</span>
+                            </div>
+                            <a href="https://kitchen-pal-james.netlify.app" target="_blank" class="project-link">View Live →</a>
+                        </div>
+
+                        <div class="project-card wip">
+                            <div class="project-top">
+                                <span class="project-status wip">IN PROGRESS</span>
+                                <h3>JB Jewelry</h3>
+                            </div>
+                            <p>Web-based sales and inventory system for a real jewelry buy/sell/repair business. Capstone project. React + digital receipts.</p>
+                            <div class="project-stack">
+                                <span>React</span><span>Vite</span><span>CSS</span>
+                            </div>
+                            <span class="project-link muted">Coming Soon...</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="panel hidden">
+            <button class="close-btn">✕ Back to Space</button>
+            <div class="panel-inner">
+                <div class="panel-header">
+                    <span class="planet-tag">🟠 VOLT STATION</span>
+                    <h2>Skills</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="skills-grid">
+                        <div class="skill-group">
+                            <h4>Frontend</h4>
+                            <div class="skill-list">
+                                <div class="skill-bar"><span>HTML5</span><div class="bar"><div style="width:90%"></div></div></div>
+                                <div class="skill-bar"><span>CSS3</span><div class="bar"><div style="width:85%"></div></div></div>
+                                <div class="skill-bar"><span>JavaScript</span><div class="bar"><div style="width:75%"></div></div></div>
+                                <div class="skill-bar"><span>React</span><div class="bar"><div style="width:50%"></div></div></div>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Backend & Tools</h4>
+                            <div class="skill-list">
+                                <div class="skill-bar"><span>Python</span><div class="bar"><div style="width:65%"></div></div></div>
+                                <div class="skill-bar"><span>Flask</span><div class="bar"><div style="width:60%"></div></div></div>
+                                <div class="skill-bar"><span>Git / GitHub</span><div class="bar"><div style="width:70%"></div></div></div>
+                                <div class="skill-bar"><span>REST APIs</span><div class="bar"><div style="width:70%"></div></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="panel hidden">
+            <button class="close-btn">✕ Back to Space</button>
+            <div class="panel-inner">
+                <div class="panel-header">
+                    <span class="planet-tag">🔵 SAKURA REALM</span>
+                    <h2>Contact</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="contact-wrap">
+                        <p class="contact-intro">I'm open to frontend roles, internships, and freelance work. Let's build something cool.</p>
+                        <div class="contact-links">
+                            <a href="https://github.com/Jamesbinas" target="_blank" class="contact-card">
+                                <span>⚡</span>
+                                <div>
+                                    <strong>GitHub</strong>
+                                    <p>github.com/Jamesbinas</p>
+                                </div>
+                            </a>
+                            <a href="mailto:jamesmartinbinas@gmail.com" class="contact-card">
+                                <span>📨</span>
+                                <div>
+                                    <strong>Email</strong>
+                                    <p>jamesmartinbinas@gmail.com</p>
+                                </div>
+                            </a>
+                            <a href="https://www.linkedin.com/in/jamesmartinbinas/" target="_blank" class="contact-card">
+                                <span>🔗</span>
+                                <div>
+                                    <strong>LinkedIn</strong>
+                                    <p>www.linkedin.com/in/jamesmartinbinas</p>
+                                </div>
+                            </a>
+                            <a href="tel:+97474040573" class="contact-card">
+                                <span>📱</span>
+                                <div>
+                                    <strong>Phone</strong>
+                                    <p>+974 7404-0573</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/yui.js"></script>
+    <script src="js/planets.js"></script>
+</body>
+</html>

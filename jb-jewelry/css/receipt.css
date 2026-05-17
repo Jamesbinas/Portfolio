@@ -1,0 +1,106 @@
+/* =====================
+   RECEIPT.CSS
+   ===================== */
+
+body {
+  background: hsl(0, 0%, 92%);
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+#receipt-container {
+  background: var(--white);
+  width: 100%;
+  max-width: 380px;
+  padding: 32px 24px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  box-shadow: var(--shadow-lg);
+}
+
+#receipt-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.receipt-logo {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  color: var(--gold-dark);
+  margin-bottom: 4px;
+}
+
+.receipt-tagline {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+
+.receipt-address,
+.receipt-contact {
+  font-size: 12px;
+  color: var(--gray);
+}
+
+.receipt-divider {
+  text-align: center;
+  color: var(--gray);
+  margin: 16px 0;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.total-row {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 8px;
+  color: var(--gold-dark);
+}
+
+.receipt-item-header {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.receipt-item-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+#receipt-footer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+#receipt-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+@media print {
+  body { background: white; padding: 0; }
+  #receipt-actions { display: none; }
+  #receipt-container { box-shadow: none; }
+}

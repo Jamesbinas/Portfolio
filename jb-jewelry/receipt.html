@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receipt — JB Jewelry</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/receipt.css">
+</head>
+<body>
+
+  <div id="receipt-container">
+
+    <!-- RECEIPT HEADER -->
+    <div id="receipt-header">
+      <h1 class="receipt-logo">JB Jewelry</h1>
+      <p class="receipt-tagline">Buy · Sell · Repair</p>
+      <p class="receipt-address">123 Jewelry Street, Placeholder City</p>
+      <p class="receipt-contact">09XX XXX XXXX</p>
+    </div>
+
+    <div class="receipt-divider">- - - - - - - - - - - - - - - - - -</div>
+
+    <!-- RECEIPT INFO -->
+    <div id="receipt-info">
+      <div class="receipt-row">
+        <span>Receipt No:</span>
+        <span id="receipt-no">#0001</span>
+      </div>
+      <div class="receipt-row">
+        <span>Date:</span>
+        <span id="receipt-date">--/--/----</span>
+      </div>
+      <div class="receipt-row">
+        <span>Customer:</span>
+        <span id="receipt-customer">---</span>
+      </div>
+      <div class="receipt-row">
+        <span>Type:</span>
+        <span id="receipt-type">---</span>
+      </div>
+    </div>
+
+    <div class="receipt-divider">- - - - - - - - - - - - - - - - - -</div>
+
+    <!-- RECEIPT ITEMS -->
+    <div id="receipt-items">
+      <div class="receipt-item-header">
+        <span>Item</span>
+        <span>Qty</span>
+        <span>Price</span>
+      </div>
+      <div id="receipt-items-list">
+        <!-- JS will populate this -->
+      </div>
+    </div>
+
+    <div class="receipt-divider">- - - - - - - - - - - - - - - - - -</div>
+
+    <!-- RECEIPT TOTAL -->
+    <div id="receipt-total">
+      <div class="receipt-row">
+        <span>Subtotal:</span>
+        <span id="receipt-subtotal">₱0.00</span>
+      </div>
+      <div class="receipt-row total-row">
+        <span>TOTAL:</span>
+        <span id="receipt-grand-total">₱0.00</span>
+      </div>
+      <div class="receipt-row">
+        <span>Payment:</span>
+        <span id="receipt-payment">Cash</span>
+      </div>
+      <div class="receipt-row">
+        <span>Change:</span>
+        <span id="receipt-change">₱0.00</span>
+      </div>
+    </div>
+
+    <div class="receipt-divider">- - - - - - - - - - - - - - - - - -</div>
+
+    <!-- RECEIPT FOOTER -->
+    <div id="receipt-footer">
+      <p>Thank you for choosing JB Jewelry!</p>
+      <p>Please keep this receipt for warranty purposes.</p>
+    </div>
+
+    <!-- PRINT BUTTON — hidden when printing -->
+    <div id="receipt-actions">
+      <button class="btn btn-primary" id="print-btn" onclick="window.print()">🖨️ Print Receipt</button>
+      <button class="btn btn-outline" id="back-btn" onclick="history.back()">← Back</button>
+    </div>
+
+  </div>
+
+  <script src="js/receipt.js"></script>
+
+</body>
+</html>

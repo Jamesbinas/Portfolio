@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repair — JB Jewelry</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/repair.css">
+</head>
+<body>
+
+  <nav id="navbar">
+    <div id="nav-logo">
+      <span class="logo-text">JB</span>
+      <span class="logo-sub">Jewelry</span>
+    </div>
+    <ul id="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="shop.html" class="nav-link">Shop</a></li>
+      <li><a href="repair.html" class="nav-link active">Repair</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <button id="hamburger">☰</button>
+  </nav>
+
+  <section id="repair-header">
+    <h1>Repair Service</h1>
+    <p>Professional jewelry repair with fast turnaround</p>
+  </section>
+
+  <section id="repair-services">
+    <h2 class="section-title">What We Repair</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="service-icon">💍</span>
+        <h3>Ring Resizing</h3>
+        <p>Too tight or too loose? We resize rings to your perfect fit.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">📿</span>
+        <h3>Chain Repair</h3>
+        <p>Broken chains and clasps repaired and reinforced.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">✨</span>
+        <h3>Cleaning & Polishing</h3>
+        <p>Restore the original shine of your jewelry.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🔩</span>
+        <h3>Stone Setting</h3>
+        <p>Loose or missing stones replaced and secured.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">⌚</span>
+        <h3>Watch Repair</h3>
+        <p>Battery replacement, strap replacement, and more.</p>
+      </div>
+      <div class="service-card">
+        <span class="service-icon">🛡️</span>
+        <h3>Replating</h3>
+        <p>Gold and silver replating to restore original finish.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPAIR FORM -->
+  <section id="repair-form-section">
+    <h2 class="section-title">Request a Repair</h2>
+    <div id="repair-form">
+
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="repair-name" placeholder="Juan Dela Cruz">
+      </div>
+
+      <div class="form-group">
+        <label>Contact Number</label>
+        <input type="text" id="repair-contact" placeholder="09XX XXX XXXX">
+      </div>
+
+      <div class="form-group">
+        <label>Type of Jewelry</label>
+        <select id="repair-type">
+          <option value="">Select type...</option>
+          <option value="ring">Ring</option>
+          <option value="necklace">Necklace</option>
+          <option value="earring">Earring</option>
+          <option value="bracelet">Bracelet</option>
+          <option value="watch">Watch</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select id="repair-service">
+          <option value="">Select service...</option>
+          <option value="resize">Ring Resizing</option>
+          <option value="chain">Chain Repair</option>
+          <option value="cleaning">Cleaning & Polishing</option>
+          <option value="stone">Stone Setting</option>
+          <option value="watch">Watch Repair</option>
+          <option value="replating">Replating</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <textarea id="repair-desc" placeholder="Describe the issue with your jewelry..."></textarea>
+      </div>
+
+      <button class="btn btn-primary" id="repair-submit">Submit Request</button>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <p class="footer-logo">JB Jewelry</p>
+    <p class="footer-sub">© 2026 JB Jewelry. All rights reserved.</p>
+  </footer>
+
+  <script src="js/repair.js"></script>
+
+</body>
+</html>

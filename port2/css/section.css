@@ -1,0 +1,347 @@
+#sections {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    pointer-events: none;
+}
+
+.panel {
+    position: absolute;
+    inset: 0;
+    background: rgba(3, 1, 10, 0.96);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    pointer-events: all;
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.panel.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+}
+
+.close-btn {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    background: transparent;
+    border: 1px solid #ffffff22;
+    color: var(--text-dim);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.close-btn:hover {
+    border-color: var(--accent-purple);
+    color: white;
+}
+
+.panel-inner {
+    width: 100%;
+    max-width: 900px;
+}
+
+.panel-header {
+    margin-bottom: 32px;
+}
+
+.planet-tag {
+    font-family: 'Orbitron', monospace;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: var(--accent-purple);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.panel-header h2 {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 900;
+    color: white;
+    text-shadow: var(--glow-purple);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 48px;
+    align-items: start;
+}
+
+.about-text p {
+    font-size: 16px;
+    color: var(--text-dim);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.big-intro {
+    font-size: 20px !important;
+    color: var(--text-main) !important;
+}
+
+.about-text strong {
+    color: white;
+}
+
+.about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.about-tags span {
+    background: rgba(124, 58, 237, 0.15);
+    border: 1px solid #7c3aed44;
+    color: var(--accent-purple);
+    padding: 4px 12px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    font-family: 'Orbitron', monospace;
+}
+
+.about-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid #ffffff15;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: border-color 0.2s, background 0.2s;
+    white-space: nowrap;
+}
+
+.link-card:hover {
+    border-color: var(--accent-purple);
+    background: rgba(124, 58, 237, 0.1);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid #ffffff10;
+    border-radius: 10px;
+    padding: 24px;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.project-card:hover {
+    border-color: #10b98155;
+    transform: translateY(-4px);
+}
+
+.project-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.project-top h3 {
+    font-family: 'Orbitron', monospace;
+    font-size: 16px;
+    color: white;
+}
+
+.project-status {
+    font-family: 'Orbitron', monospace;
+    font-size: 9px;
+    letter-spacing: 2px;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+.project-status.live {
+    background: #10b98122;
+    border: 1px solid #10b98155;
+    color: #10b981;
+}
+
+.project-status.wip {
+    background: #f9731622;
+    border: 1px solid #f9731655;
+    color: #f97316;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.project-stack span {
+    font-size: 11px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #ffffff15;
+    padding: 2px 8px;
+    border-radius: 3px;
+    color: var(--text-dim);
+    letter-spacing: 0.5px;
+}
+
+.project-link {
+    font-size: 13px;
+    color: #10b981;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+.project-link:hover {
+    color: white;
+}
+
+.project-link.muted {
+    color: #ffffff33;
+    cursor: default;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.skill-group h4 {
+    font-family: 'Orbitron', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--accent-purple);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.skill-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.skill-bar span {
+    font-size: 13px;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+}
+
+.bar {
+    width: 100%;
+    height: 3px;
+    background: #ffffff10;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.bar div {
+    height: 100%;
+    background: linear-gradient(to right, var(--accent-purple), var(--accent-cyan));
+    border-radius: 2px;
+    animation: barFill 1.2s ease both;
+}
+
+@keyframes barFill {
+    from { width: 0% !important; }
+}
+
+.contact-wrap {
+    max-width: 800px;
+}
+
+.contact-intro {
+    font-size: 18px;
+    color: var(--text-dim);
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.contact-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid #ffffff10;
+    padding: 20px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-main);
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.contact-card:hover {
+    border-color: var(--accent-cyan);
+    background: rgba(6, 182, 212, 0.05);
+}
+
+.contact-card span {
+    font-size: 24px;
+}
+
+.contact-card strong {
+    display: block;
+    font-size: 15px;
+    color: white;
+    margin-bottom: 2px;
+}
+
+.contact-card p {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin: 0;
+}
+
+.contact-note {
+    font-size: 12px;
+    color: #ffffff33;
+    font-style: italic;
+}
